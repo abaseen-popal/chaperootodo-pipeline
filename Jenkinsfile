@@ -2,14 +2,14 @@ pipeline{
         agent any
         environment {
             app_version = 'v1'
-            rollback = 'true'
+            rollback = 'false'
         }
         stages{
             stage('Build Image'){
                 steps{
                     script{
                         if (env.rollback == 'false'){
-                            image = docker.build("htrvolker/chaperoo-frontend")
+                            image = docker.build(abaseen/chaperoo-frontend")
                         }
                     }
                 }
