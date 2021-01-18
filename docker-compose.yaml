@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   chaperoo-frontend:
-    image: htrvolker/chaperoo-frontend:${app_version}
+    image: abaseen/chaperoo-frontend:${app_version}
     build: .
     ports:
       - target: 80
